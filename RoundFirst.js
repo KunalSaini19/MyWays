@@ -1,0 +1,37 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript 
+
+// Write a Fizz Buzz function where you have to Print Fizz if the number is divisible by 3, Buzz if divisible by 4 and FizzBuzz if its divisible by both 3 and 4 else just print the number. To get the output you have to pass sum of your phone number in this function
+
+// Example Input: 9000000007
+
+// Example Output: 1 2 Fizz Buzz 5 Fizz 7 Buzz Fizz 10 11 FizzBuzz 13 14 Fizz Buzz
+
+function fizzBuzz(phoneNumberSum){
+    let output = " ";
+    for(let i=1;i<=phoneNumberSum;i++){
+        if(i%3 == 0 && i%4 == 0){
+            output += " FizzBuzz ";
+        }
+        else if(i%3 == 0){
+            output +=" Fizz ";
+        }
+        else if(i%4 == 0){
+            output +=" Buzz ";
+        }
+        else{
+            output += i+" ";
+        }
+    }
+    console.log(output);
+    
+}
+
+const phoneNumber = "9000000007"
+
+let sum = 0;
+for(let i = 0; i < phoneNumber.length;i++){
+    sum +=parseInt(phoneNumber.charAt(i));
+}
+
+fizzBuzz(sum);
